@@ -1,0 +1,20 @@
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    playSound();
+});
+
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+    playSound();
+});
+
+document.addEventListener('keydown', function(e) {
+    if (
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) ||
+        (e.ctrlKey && e.key === 'U')
+    ) {
+        e.preventDefault();
+        playSound();
+    }
+});
